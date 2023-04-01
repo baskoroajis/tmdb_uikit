@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="166" id="Hye-IH-1Kb" customClass="MovieListItemCell" customModule="IMDBUIkit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="811" height="166"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hye-IH-1Kb" id="uWa-Xj-AM5">
+                <rect key="frame" x="0.0" y="0.0" width="811" height="166"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jEl-Y5-os5">
+                        <rect key="frame" x="0.0" y="0.0" width="811" height="166"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nV-Dc-0PY">
+                                <rect key="frame" x="0.0" y="73" width="41.333333333333336" height="20.333333333333329"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="thumbnail" translatesAutoresizingMaskIntoConstraints="NO" id="qmK-ZD-bGy">
+                                <rect key="frame" x="406" y="0.0" width="405" height="166"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                            </imageView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="jEl-Y5-os5" secondAttribute="trailing" id="23F-Nk-qmF"/>
+                    <constraint firstAttribute="bottom" secondItem="jEl-Y5-os5" secondAttribute="bottom" id="LnA-sy-wtC"/>
+                    <constraint firstItem="jEl-Y5-os5" firstAttribute="top" secondItem="uWa-Xj-AM5" secondAttribute="top" id="OI4-eX-aPy"/>
+                    <constraint firstItem="jEl-Y5-os5" firstAttribute="leading" secondItem="uWa-Xj-AM5" secondAttribute="leading" id="e7Z-Mp-LxT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imageThumbnail" destination="qmK-ZD-bGy" id="WU6-KK-8Ef"/>
+                <outlet property="textDescription" destination="2nV-Dc-0PY" id="6y4-gQ-QnX"/>
+            </connections>
+            <point key="canvasLocation" x="-690.83969465648852" y="-42.253521126760567"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="thumbnail" width="405" height="600"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
